@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.function.UnaryOperator;
 import java.util.regex.Pattern;
 
+import org.controlsfx.control.CheckComboBox;
+
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,13 +19,16 @@ import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Control;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 import javafx.util.StringConverter;
 import javafx.util.converter.IntegerStringConverter;
 
@@ -188,6 +193,38 @@ public class CommonFunction {
 		
 		return choiceBox;
 	}
+	public static CheckComboBox generateComboBox(List<String> list) {
+		// TODO Auto-generated method stub
+		return new CheckComboBox<String>(FXCollections.observableArrayList(list));
+	}
 	
+	public static HBox HBoxAdd(int padding, Node... children) {
+		HBox temp = new HBox();
+		temp.setPadding(new Insets(padding));
+		temp.alignmentProperty().set(Pos.CENTER);
+		temp.setSpacing(10);
+		
+		temp.getChildren().addAll(children);
+		return temp;
+	}
+	
+	public static HBox HBoxAddLeft(int padding, Node... children) {
+		HBox temp = new HBox();
+		temp.setPadding(new Insets(padding));
+		temp.alignmentProperty().set(Pos.BASELINE_LEFT);
+		temp.setSpacing(10);
+		
+		temp.getChildren().addAll(children);
+		return temp;
+	}
+	
+	public static VBox VBoxAdd(int padding, Node... children) {
+		VBox temp = new VBox();
+		temp.setPadding(new Insets(padding));
+		temp.alignmentProperty().set(Pos.CENTER);
+		temp.setSpacing(10);
+		temp.getChildren().addAll(children);
+		return temp;
+	}
 	
 }

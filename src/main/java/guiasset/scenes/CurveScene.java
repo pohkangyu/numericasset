@@ -45,7 +45,7 @@ public class CurveScene extends Stage{
 		
 		nameConvention = title.replaceAll(" ", "").toLowerCase();
 		
-	try {
+		try {
 			curveChoiceData = (List<XYChart.Series>) InformationStore.class.getField(nameConvention + "ChoiceData").get(null);
 			curveAxis = (List<String>) InformationStore.class.getField(nameConvention + "Axis").get(null);
 			curveXAxis = (List<String>) InformationStore.class.getField(nameConvention + "XAxis").get(null);
@@ -136,8 +136,6 @@ public class CurveScene extends Stage{
         this.setTitle(title);
         this.setScene(new Scene(topLayer));
         this.show();
-        //this.setOnHiding((events) -> {updateChoiceBoxes(entry.getKey());
-		
 	}
 	
 	protected void updateTextFieldArrays(String newValue) {

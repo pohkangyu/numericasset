@@ -9,6 +9,11 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
 public class InformationStore {
+		
+	//width size, height size
+	public static double widthSize= 0.75;
+	public static double heightSize= 0.75;
+	
 	//To generate a path
 	public static final String dir_path = "guiasset.tabs.";
 	public static final String append_tab = "Tab";
@@ -20,7 +25,8 @@ public class InformationStore {
 	
 	
 	//Tabs for mainScene 
-	public static final String[] mainSceneTab = new String[] {"Portfolio", "Balancing"};
+	//public static final String[] mainSceneTab = new String[] {"Portfolio", "Balancing"};
+	public static final String[] mainSceneTab = new String[] {"Balancing", "Portfolio"};
 	
 	//Tabs for PortfolioTab
 	public static final String[] portfolioTab = new String[] {"FixIncome", "Equity", "Cash"};
@@ -34,11 +40,13 @@ public class InformationStore {
 																	"Coupon Frequency", "Start Date", "Maturity Date",
 																	"Purchase Date");
 	
-	public static final List<String> fixincomeFieldsProperties = Arrays.asList("String", "Integer", "2SF", 
+	public static final List<String> fixincomeProperties = Arrays.asList("String", "Integer", "2SF", 
 																		"Integer", "Date", "Date",
 																		"Date");
 	
-	public static final List<String> fixincomeComboChoice = Arrays.asList("Category");
+	public static final List<String> fixincomeComboChoice = Arrays.asList("Fix Income Category");
+	
+	public static final List<String> fixincomecategoryComboData = new ArrayList<String>(Arrays.asList("Oil", "Gas"));
 
 	public static final List<String> fixincomeChoice = Arrays.asList("Spot Curve");
 		
@@ -60,13 +68,16 @@ public class InformationStore {
 	//Information for Equity
 	public static final List<String> equityFields = Arrays.asList("Equity Name", "Equity Value", "Purchase Date");
 	
-	public static final List<String> equityFieldsProperties = Arrays.asList("String", "Integer","Date");
+	public static final List<String> equityProperties = Arrays.asList("String", "Integer","Date");
 
 	public static final List<String> equityButtons = Arrays.asList("Add", "Remove");
 	
 	public static final List<String> equityChoice = Arrays.asList("Growth Curve");
 	
-	public static final List<String> equityComboChoice = Arrays.asList("Category");
+	public static final List<String> equityComboChoice = Arrays.asList("Equity Category");
+	
+	public static final List<String> equitycategoryComboData = new ArrayList<String>(Arrays.asList("HealthCare"));
+
 	
 	public static final List<String> growthcurveXAxis = Arrays.asList("Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6");
 	public static final List<String> growthcurveAxis = Arrays.asList("No. Year", "Percentage");
@@ -86,11 +97,14 @@ public class InformationStore {
 	//Information for Cash
 	public static final List<String> cashFields = Arrays.asList("Cash Name", "Cash Value", "Purchase Date");
 	
-	public static final List<String> cashFieldsProperties = Arrays.asList("String", "Integer","Date");
+	public static final List<String> cashProperties = Arrays.asList("String", "Integer","Date");
 
 	public static final List<String> cashButtons = Arrays.asList("Add", "Remove");
 	
-	public static final List<String> cashComboChoice = Arrays.asList("Category");
+	public static final List<String> cashComboChoice = Arrays.asList("Cash Category");
+	
+	public static final List<String> cashcategoryComboData = new ArrayList<String>(Arrays.asList("retirement"));
+
 	
 	public static final List<String> cashChoice = Arrays.asList("Cash Growth");
 	public static final List<String> cashgrowthXAxis = Arrays.asList("Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6");
